@@ -107,7 +107,7 @@
            //var el = document.getElementById("psId");
            var ps = select.value;
            //alert("ps : " + ps);
-           location.href="page.do?m=sizeChange&ps="+ps;
+           location.href="page.do?&ps="+ps;
        }
     </script>
     
