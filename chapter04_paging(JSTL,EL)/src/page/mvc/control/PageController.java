@@ -82,7 +82,8 @@ public class PageController extends HttpServlet {
 		if(result.getList().size() == 0 && currentPage>1) {
 			response.sendRedirect("page.do?m=list&cp="+(currentPage-1));
 		}else {
-			String view = "paging_list.jsp";
+//			String view = "paging_list.jsp";
+			String view = "paging_new.jsp";
 			RequestDispatcher rd = request.getRequestDispatcher(view);
 			rd.forward(request, response);
 		}
