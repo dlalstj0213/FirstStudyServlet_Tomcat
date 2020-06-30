@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>제목</title>
+	  <script>
+	      function f(){
+			 var xhttp = new XMLHttpRequest();	
+		     xhttp.onreadystatechange = function(){
+				 if(this.status == 200 && this.readyState == 4){
+					 updateUI(this.responseText);
+				 }
+			 }
+     
+	         //(1)GET방식 
+			 xhttp.open("GET", "a02.txt?name=길동&age=20", true);
+			 xhttp.send();
+
+			 //(2)Post방식 
+             xhttp.open("POST", "a02.txt", true);
+             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+             xhttp.send("name=순신&age=20");
+		  }
+		  function updateUI(jsonTxt){
+			  var obj = JSON.parse(jsonTxt);
+			  //alert("title: " + obj.books[0].title + ", author이름: " +obj.books[0].author.name);
+
+              var table = "<style>";
+				  table +="table {width:50%;}";
+				  table +="table, th, td {border:1px solid black; border-collapse:collapse;  padding:10px}";
+			      table +="</style>";
+
+			  table += "<table>";
+			  table += "<tr><th>제목</th><th>가격</th><th>저자이름</th><th>저자나이</th><tr>";
+			  for(book of obj.books)
+			  {
+				  table +="<tr><td>"+book.title+"</td>"  
+				         +"<td>"+book.price+"</td>" 
+						 +"<td>"+book.author.name+"</td>"
+						 +"<td>"+book.author.age+"</td></tr>";
+			  }
+			  table += "</table>";
+
+			  var elP = document.getElementById("pId");
+			  elP.innerHTML = table;
+		  }
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>Ajax ( response: JSON )</h1>
+	   <p id="pId" align="center">
+	       결과 영역 
+	   </p>
+
+	   <input type="button" value="클릭" onclick="f()"/>
+   </body>
+</html>

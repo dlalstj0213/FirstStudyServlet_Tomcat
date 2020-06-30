@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>j11.html</title>
+		<script>
+			var girlObj = {name:"다솜", age:27};
+			function f1(){
+				var txt = "";
+				for(key in girlObj){
+				  txt += (key + ": " + girlObj[key] + "  "); 
+				}
+				var el = document.getElementById("dId").innerHTML = txt;
+			}
+			
+			foods = ["김치", "깍두기"];
+			function f2(){
+				for(item of foods){
+					alert(item);
+				}
+			}
+		</script>
+	</head>
+	<body style="text-align:center">
+		<h1>for in/of</h1>
+		<div id="dId">
+		   결과 영역 
+		</div>	
+		<a href="javascript:f1()">클릭(객체)</a> 
+		<a href="javascript:f2()">클릭(배열)</a> 
+
+	</body>
+</html>

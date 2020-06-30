@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>h07.html</title>
+		<style>
+			p#pId{color:red}
+			.pC{color:green} <!--.앞에 아무것도 없거나 *라고 적용한다면 .뒤에 선언된 모든 클래스를 적용한다-->
+			<!--p.pC, div.pC{color:green}이라고 해도 같은 결과-->
+		</style>
+	</head>
+	<body style="text-align:center">
+		<h1>Selector</h1>
+		
+		<!--id는 고유한 값이기 때문에 중복 적으로 쓸 수 없다. 쓰고 싶다면 class로 정의해서 사용하자(id는 #으로 접근, class는 .으로 접근)-->
+		<p class="pC">문단1</P>
+		<p id=pId>문단2</P>
+		<p class="pC">문단3</P>
+		
+		<!--div는 blocktag(줄이넘어감)가 되고 span은 blocktag가 안된다-->
+		<div class="pC">
+			선택영역(div)
+		</div>
+		추가데이터1
+		<span>
+			선택영역(span)
+		</span>
+		추가데이터2
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>제목</title>
+	  <script>
+	      function f0(){
+			  elDiv = document.getElementById("divId");
+              cNodes = elDiv.childNodes;
+		  }
+		  function f1(){
+              var elFont = document.createElement("font");
+			  var attrFont = document.createAttribute("style");
+              attrFont.value = "color:blue";
+			  elFont.setAttributeNode(attrFont);
+			  var txt = document.createTextNode("바뀌는 내용");
+              elFont.appendChild(txt);
+
+              elDiv.replaceChild(elFont, cNodes[1]);
+		  }
+		  function f2(){
+			  elDiv.removeChild(cNodes[2]);	
+		  }
+	  </script>
+   </head>
+   <body style="text-align:center" onload="f0()">
+       <h1>DOM update, delete</h1>
+
+	  <div id="divId">
+	     one
+		 <em>two</em>
+		 three
+	  </div>
+
+	  <button onclick="f1()">수정</button>
+	  <button onclick="f2()">삭제</button>
+   </body>
+</html>

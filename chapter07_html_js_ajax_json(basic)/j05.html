@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>j05.html</title>
+		<script>
+			var obj = {
+				name:"홍길동",
+				addr:"서울시",
+				age:27,
+				msg: function(){ //멤버변수를 받을 때 this.로 식별해야한다.
+					return this.name +" "+ this.addr +" "+ this.age;
+				}
+			}
+		</script>
+	</head>
+	<body style="text-align:center">
+		<h1>Function in Object</h1>
+		<a href="javascript:alert(obj.msg())">호출</a>
+	</body>
+</html>

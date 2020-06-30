@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>제목</title>
+		<script>
+			/*바이트수가 아니라 글자수로 읽음
+			var txt = "글자수";
+			var len = txt.length;
+			alert("len: "+len);
+			*/
+				
+			
+			var str = "엄마처럼 다정하고 잠처럼 편하고 꿈처럼 행복한거야";
+			/*
+			var pos1 = str.indexOf("처럼");
+			alert("pos1 : "+pos1);
+			var pos2 = str.lastIndexOf("처럼");
+			alert("pos2 : "+pos2);
+			*/
+			
+			var r1 = str.slice(10, 10+3); //i1 <= val < i2
+			alert("r1 : "+r1);
+			var r2 = str.substring(10, 10+3); //i1 <= val < i2
+			alert("r2 : "+r2);
+			var r3 = str.substr(10, 3); //i1 <= val < i2
+			alert("r3 : "+r3);
+			var r4 = str.substr(10);
+			alert("r4 : "+r4);
+			var r5 = str.substr(-5);
+			alert("r5 : "+r5);
+			var r6 = replaceAll(str, "처럼", "같이");
+			function replaceAll(str, word1, word2){
+				return str.split(word1).join(word2);
+			}
+			alert("r6 : "+r6);
+			
+			var target = "  Hello Mr";
+			var r7 = target.toLowerCase();
+			alert("r7 : "+r7);
+			var r8 = target.toUpperCase();
+			alert("r8 : "+r8);
+			var r9 = target.trim();
+			alert("r9 : "+r9.length);
+			
+			var r10 = str.charAt(0);
+			alert("r10: "+r10);
+			str[0] = "아" //str객체는 변경되지 않는다.
+			alert("str[0]: "+str[0]);
+		</script>
+	</head>
+	<body style="text-align:center">
+		<h1>string</h1>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>제목</title>
+	  <script>
+	      var f = function(){
+		      var obj = {name:"홍길동", age:25};
+			  
+			  var jsonTxt = JSON.stringify(obj); // js object -> json txt
+			  document.getElementById("dId").innerHTML 
+				  = "<h2 style='color:red'>"+jsonTxt+"</h2>";
+		  }
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>JSON stringify()</h1>
+	   <div id="dId">
+	       결과 영역 
+	   </div>
+	   <a href="javascript:f()">호출</a>
+   </body>
+</html>

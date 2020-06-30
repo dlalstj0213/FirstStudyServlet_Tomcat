@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>제목</title>
+		<style>
+			<!--table{border:1px solid red; border-collapse:collapse; padding:10px}
+				라고 적용 할 수 있지만 이렇게 되면 바디의 tr과 td가 적용이 안된다-->
+			table{width:50%}
+			table, th, td{border:1px solid red; border-collapse:collapse; padding:10px} 
+			<!--border=라인굵기 solid color=라인색깔 border-collapse=이중라인 합치기padding=칸넓이-->
+		</style>
+	</head>
+   <body style="text-align:center">
+		<h1>테이블 태그와 스타일</h1>
+		<center>
+			<table>
+				<tr>
+					<th>이름</th>
+					<th>주소</th>
+					<th>나이</th>
+				</tr>
+				
+				<tr>
+					<td align="right">이순신</td>
+					<td align="left">부산시</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td colspan=2>이순신</td>
+					<td>부산시</td>
+				</tr>
+			</table>
+		</center>
+   </body>
+</html>

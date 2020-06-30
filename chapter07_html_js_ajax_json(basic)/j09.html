@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>j09.html</title>
+
+	</head>
+	<body style="text-align:center">
+		<h1>Math</h1>
+		<div id="dId">
+			결과 영역
+		</div>
+		<a href="javascript:alert(f(2,4))">클릭</a>
+		
+		<script>
+			var el = document.getElementById("dId");
+			<!-- var r = Math.random(); //0<=vale<1 -->
+			<!-- var r = Math.floor(Math.random()*10); -->
+			<!-- el.innerHTML = r; -->
+			
+			function f(min, max){ //min <= value < max
+				return Math.floor(Math.random()*(max-min) + min);
+			}
+		</script>
+	</body>
+</html>

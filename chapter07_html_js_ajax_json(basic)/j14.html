@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>제목</title>
+	  <script>
+	      function f1(){
+			  var jsonTxt = '{"books": [' + 
+			       '{"title":"자바", "price":"10000"},' + 
+				   '{"title":"오라클", "price":"20000"}' + 
+				   ']}';
+			   
+			  obj = JSON.parse(jsonTxt); // json -> js object 
+              document.getElementById("dId").innerHTML 
+			      = obj.books[0].title + " " + obj.books[0].price;
+		  }
+		  function f2(){
+			  var jsonTxt = '[{"title":"자바", "price":"10000"}, {"title":"오라클", "price":"20000"}]';
+			   
+			  obj = JSON.parse(jsonTxt); // json -> js object 
+              document.getElementById("dId").innerHTML 
+			      = obj[1].title + " " + obj[1].price;
+		  }
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>JSON parse()</h1>
+	   <div id="dId">
+	       결과 영역 
+	   </div>
+	   <a href="javascript:f1()">호출1</a>
+	   <a href="javascript:f2()">호출2</a>
+   </body>
+</html>

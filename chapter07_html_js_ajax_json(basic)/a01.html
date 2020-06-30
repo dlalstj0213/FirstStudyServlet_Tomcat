@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>제목</title>
+	  <script>
+	      function f(){
+			 var xhttp = new XMLHttpRequest();	
+		     xhttp.onreadystatechange = function(){
+				 if(this.status == 200 && this.readyState == 4){
+					 document.getElementById("pId").innerHTML 
+					    = this.responseText;
+				 }
+			 }
+    
+			 xhttp.open("GET", "a01.txt", true); //true=비동기 / false=동기 / "a01.txt"는 실제로 mvc모델의 컨트롤러로 간다.ex)"a01.do" 등
+			 xhttp.send();
+		  }
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>Ajax ( response: Text )</h1>
+	   <p id="pId">
+	       결과 영역 
+	   </p>
+
+	   <input type="button" value="클릭" onclick="f()"/>
+   </body>
+</html>

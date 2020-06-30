@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>d1.html</title>
+   </head>
+   <body style="text-align:center">
+      <h1>DOM select</h1>
+
+	  <div id="divId">
+	     one
+		 <em>two</em>
+		 three
+	  </div>
+
+	  <script>
+	     /*
+	     alert("Node.ELEMENT_NODE: " + Node.ELEMENT_NODE); //1
+		 alert("Node.TEXT_NODE: " + Node.TEXT_NODE); //3
+ 		 alert("Node.ATTRIBUTE_NODE: " + Node.ATTRIBUTE_NODE); //2
+		 */
+
+		 var elDiv = document.getElementById("divId"); // 엘리먼트 노드 
+		 //alert("elDiv.nodeType: " + elDiv.nodeType); //1
+		 //alert("elDiv.nodeName: " + elDiv.nodeName); //DIV
+		 //alert("elDiv.nodeValue: " + elDiv.nodeValue); //null 
+
+		 var txt = elDiv.firstChild; //텍스트 노드
+		 //alert("txt.nodeType: " + txt.nodeType); //3
+		 //alert("txt.nodeName: " + txt.nodeName); //#text
+		 //alert("txt.nodeValue: " + txt.nodeValue); //one
+
+         //var elEm = elDiv.childNodes[1];
+		 var elEm = txt.nextSibling; // 엘리먼트 노드	
+		 //alert("elEm.nodeType: " + elEm.nodeType); //1
+		 //alert("elEm.nodeName: " + elEm.nodeName); //EM
+		 //alert("elEm.nodeValue: " + elEm.nodeValue); //null 
+
+		 var txtEmChild = elEm.firstChild; //텍스트 노드 
+		 //alert("txtEmChild.nodeType: " + txtEmChild.nodeType); //3
+		 //alert("txtEmChild.nodeName: " + txtEmChild.nodeName); //#text
+		 //alert("txtEmChild.nodeValue: " + txtEmChild.nodeValue); //two
+
+         var attrsDiv = elDiv.attributes; //속성 노드 
+		 alert("attrsDiv[0].nodeType: " + attrsDiv[0].nodeType); //2
+		 alert("attrsDiv[0].nodeName: " + attrsDiv[0].nodeName); //id
+		 alert("attrsDiv[0].nodeValue: " + attrsDiv[0].nodeValue); //divId
+	  </script>
+   </body>
+</html>

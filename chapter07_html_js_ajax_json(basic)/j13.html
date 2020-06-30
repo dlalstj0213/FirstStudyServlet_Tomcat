@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>제목</title>
+	  <script>
+	      class Human {
+			  /*constructor(){ //기본 생성자는 의미가 없음: 쓰지 말것!
+			  }*/
+			  static name = "이순신";
+              constructor(name){
+				  this.name = name;
+			  }
+			  move(){
+				  return this.name + "이 걷는다";
+			  }
+			  static setName(name){
+				  this.name = name;
+			  }
+			  static talk(){
+				  //return new Human("강감찬").name + "이 말하다";
+				  //return obj.name + "이 말하다";
+				  return this.name + "이 말하다";
+			  }
+	      }
+		  /*obj = new Human("배현철");
+          alert(obj.move());
+		  Human.setName("다솜");
+		  alert(Human.talk()); //only Class 
+		  */
+
+          class SuperMan extends Human
+          {
+			  constructor(name, power){
+				  super(name); //new Human(name);
+				  this.power = power;
+			  }
+			  move(){ //오버라이딩 가능 
+				  return this.name + "이 난다"; 
+			  }
+          }
+		  baby = new SuperMan("이현호", 100);
+		  alert(baby.move()); 
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>Class</h1>
+   </body>
+</html>

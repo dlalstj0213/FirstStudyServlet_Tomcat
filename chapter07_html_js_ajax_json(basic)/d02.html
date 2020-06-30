@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>d02.html</title>
+	  <script>
+	     function f(){
+			 var elDiv = document.getElementById("divId");
+
+			 var elFont = document.createElement("font");
+			 var attrFont = document.createAttribute("style");
+             attrFont.value = "color:red";
+			 elFont.setAttributeNode(attrFont);
+
+             var txt = document.createTextNode("추가된 내용");
+             elFont.appendChild(txt);
+
+			 var cNodes = elDiv.childNodes;
+             elDiv.insertBefore(elFont, cNodes[1]);
+		 }
+	  </script>
+   </head>
+   <body style="text-align:center">
+      <h1>DOM insert</h1>
+
+	  <div id="divId">
+	     one
+		 <em>two</em>
+		 three
+	  </div>
+
+	  <button onclick="f()">클릭</button>
+   </body>
+</html>

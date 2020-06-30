@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>j02.html</title>
+		<script>
+		<!-- var i = 10; ('함수 밖'에 var를 붙여서 선언하면 전역변수가 된다.)-->
+			function f(){
+				<!-- var i = 10; ('함수 안'에 var를 붙여서 선언하면 지역변수가 되고 var가 없이 선언하면 전역변수가 된다.)-->
+				var i = 10;
+				var j = 2;
+				var k = i % ++j; 
+				alert("f1()k: "+k);
+				
+				var name = "홍길동";
+				document.getElementById("result").innerHTML=k+" "+name;
+				
+				
+				var power = 2**3;
+				alert("power : "+power);
+				
+				f2();
+			}
+			<!-- 산술: +, -, *, **(제곱), /, % -->
+			<!-- 비교: ==, !=, >, <, >=, <= -->
+			<!-- 논리: &&, ||, ! -->
+			<!-- 증감: ++, -- -->
+			function f2(){
+				alert("f2()i: "+i);
+			}
+		</script>
+	</head>
+	<body style="text-align:center">
+		<h1 id="h1Id">Variables</h1>
+		
+		<div id="result">
+			여기에 결과가 뜰 예정
+		</div>
+		
+		<a href="javascript:f()">호출</a>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>j10.html</title>
+	  <script>
+	      var result = "a";
+	      var f = function(val){
+			  switch(val){
+				  case "짜장면": result="a"; break;
+				  case 10.12: result="b"; break;
+				  case "라면":  result="c"; break;
+				  default : result="default"; 
+			  }
+			  document.getElementById("dId").innerHTML = result;
+          }
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>Switch</h1>
+	   <div id="dId">
+	       결과 영역 
+	   </div>
+	   <a href="javascript:f(10.12)">클릭</a> 
+   </body>
+</html>
