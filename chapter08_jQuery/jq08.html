@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq.html08</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#d1").click(function(){
+					//$("#d2").slideUp("slow");
+					//$("#d2").slideDown("slow");
+					//$("#d2").slideToggle("slow");
+					$("#d2").slideUp("slow").slideDown("slow").slideUp("slow").slideDown("slow"); //chain
+				});
+				$("#b1").click(function(){
+					$("#d2").stop();
+				});
+			});
+		</script>
+		<style>
+			#d1, #d2{
+				padding : 5px;
+				text-align : center;
+				background-color : yellow;
+				border : solid 1px red;
+			}
+			#d2{
+				padding : 50px;
+				/*display : none;*/
+			}
+		</style>
+	<head>
+	<body style="text-align:center">
+		<h1>효과4(Slide)</h1>
+		<button id="b1">Animation Stop</button>
+		<div id="d1">div1</div>
+		<div id="d2">div2</div>
+	</body>
+</html>

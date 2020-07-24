@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq06.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("#d1").fadeOut("slow", "swing");
+				});
+				$("#b2").click(function(){
+					$("#d1").fadeIn("slow", "linear");
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>효과2(Fade In)</h1>
+		<button id="b1">짜잔!</button>&nbsp;&nbsp;
+		<button id="b2">뚜둔!</button><br/>
+		<div id="d1" style="font-size:50pt">헬로오우~</div>
+	</body>
+</html>

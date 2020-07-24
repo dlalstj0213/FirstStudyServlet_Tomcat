@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq10.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("p").prepend("<b style=color:blue>데이터1</b>");
+				});
+				$("#b2").click(function(){
+					$("p").append("<b style=color:red>데이터1</b>");
+				});
+				$("#b3").click(function(){
+					$("img").before("<b style=color:blue>데이터1</b>");
+				});
+				$("#b4").click(function(){
+					$("img").after("<b style=color:red>데이터1</b>");
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>Add(prepend(), append(), before(), after())</h1>
+		<p style="background-color:yellow">|기준|</p>
+
+		<button id="b1">추.가(앞)!</button>&nbsp;&nbsp;
+		<button id="b2">추.가(뒤)!</button>
+		<br/>
+		
+		<img src="http://nubizio777.img17.kr/banner/2020/pc/sub_03.jpg"/>
+		<br/>
+		<button id="b3">추.가(앞)!</button>&nbsp;&nbsp;
+		<button id="b4">추.가(뒤)!</button>&nbsp;&nbsp;
+		<br/>
+	</body>
+</html>

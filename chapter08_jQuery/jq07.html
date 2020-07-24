@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq07.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("#d1").fadeToggle(); //fast
+					$("#d2").fadeToggle("show");
+					$("#d3").fadeToggle(2000);
+				});
+				$("#b2").click(function(){
+					$("#d1").fadeTo("fast", 0.2); //fast
+					$("#d2").fadeTo("show", 0.5);
+					$("#d3").fadeTo(2000, 0);
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>효과3(FadeToggle & FadeTo)</h1>
+		<button id="b1">클릭(FadeToggle)</button>&nbsp;&nbsp;
+		<button id="b2">클릭(FadeTo)</button>&nbsp;&nbsp;
+		<div id="d1" style="font-size:50pt">헬로오옹~</div>
+		<div id="d2" style="font-size:50pt">안뇨오옹~</div>
+		<div id="d3" style="font-size:50pt">니하오옹~</div>
+	</body>
+</html>

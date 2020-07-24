@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq02.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			/*$(document).ready(function(){
+				$("p").click(function(){
+					//$("p").hide();
+					$(this).hide();
+				});
+			});*/
+			$(document).ready(function(){
+				$("button").click(function(){
+					//$(".c").hide();
+					$("p.c").hide();
+				});
+			});		
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1 class="c">jq02.html</h1>
+		<p>문단1</p>
+		<p class="c">문단2</p>
+		<p>문단3</p> 
+		
+		<button>클릭</button>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>jq15.html</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script>
+	     $(document).ready(function(){
+		     $("#name").on("keyup", function(){ 
+				 $.ajax({
+					url:"jq15.jsp", 
+					type: "GET", 
+					data: {n:$("#name").val()}, 
+					success: function(p1, p2, p3){
+						$("#hint").html(p1);
+					}
+				 });
+			 }); 
+		 });
+		 // [jQuery api>>]The bind() method was deprecated in version 3.0. Use the on() method instead
+		 // .bind() 보다 .on()을 활용하자
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>Ajax - ajax()</h1>
+
+       이름: <input id="name">
+
+	   <p>
+	       힌트: <span id="hint"></span>
+	   </p>
+        
+   </body>
+</html>

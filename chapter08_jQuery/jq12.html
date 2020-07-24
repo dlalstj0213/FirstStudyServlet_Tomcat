@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq12.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					//$("p").addClass("a");
+					//$("h1").addClass("b");
+					$("p, h1").addClass("a");
+					$("#p2").addClass("b");
+				});
+				$("#b2").click(function(){
+					$("p, h1").removeClass("a");
+					$("#p2").removeClass("b");
+				});
+				$("#b3").click(function(){
+					$("p, h1").toggleClass("a");
+					$("#p2").toggleClass("b");
+				});
+				$("#b4").click(function(){
+					$("h1").css({"background-color" : "yellow", "color" : "blue"});
+				});
+			});
+		</script>
+		<style>
+			.a{
+				color : red;
+			}
+			.b{
+				font-size : 15pt;
+			}
+		</style>
+	<head>
+	<body style="text-align:center">
+		<h1>CSS 적용(addClass(), removeClass(), toggleClass(), css())</h1>
+		
+		<p>문단1</p>
+		<p id="p2">문단2</p>
+		<button id="b1">CSS적용</button>
+		<button id="b2">CSS제거</button>
+		<br/>
+		<button id="b3">CSS적용/제거</button>
+		<br/>
+		<button id="b4">CSS직접적용</button>
+		
+	</body>
+</html>

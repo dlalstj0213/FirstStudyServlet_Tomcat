@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq09.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					alert($("p").text()); //get
+					$("p").text("수정되어랐!"); //set
+				});
+				$("#b2").click(function(){
+					alert($("p").html()); //set
+					$("p").html("하이룽 <strong>마이프렌또!</strong>"); //set
+				});
+				$("#b3").click(function(){
+					alert($("input").val()); //val()안에 매개변수가 들어간다면 set Value 없으면 get Value
+				});
+				$("#b4").click(function(){
+					var url = $("a").attr("href"); //get Attribute
+					alert(url);
+					$("a").text("네이버"); //set
+					//$("a").attr("href", "http://www.naver.com"); //set Attribute
+					$("a").attr({"href" : "http://www.naver.com", "style" : "color:green"});
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>Get(text(), html(), val(), attr())</h1>
+		<p>
+			문단
+			<font color="red">1</font>
+		</p>
+		
+		<button id="b1">Text를 보여줘용</button>
+		<button id="b2">Html를 보여줘용</button>
+		<br/>
+		<input value="내요오옹ㅎㅎ">
+		<button id="b3">input의 값은?!</button>
+		<br/>
+		<a href="http://www.daum.net" style="text-decoration:none">다음</a><br/>
+		<button id="b4">속성값 추출</button><br/>
+	</body>
+</html>

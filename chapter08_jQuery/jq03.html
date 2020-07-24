@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>jq03.html</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script>
+	  /*
+	     $(document).ready(function(){
+		     $("p").mouseleave(function(){ //click, dblclick, mouseenter, mouseleave, mousedown, ..
+				 $(this).hide();
+			 }); 
+		 });
+		 */
+
+         $(document).ready(function(){
+		     $("input").focus(function(){
+				 $(this).css("background-color", "yellow");
+			 });
+			 $("input").blur(function(){
+				 $(this).css("background-color", "red");
+			 });
+		 });
+	  </script>
+   </head>
+   <body style="text-align:center">
+       <h1>Event1</h1>
+       
+	   <p>  
+	       문단1
+	   </p>
+
+	   이름: <input name="name"><br/>
+	   주소: <input name="addr">
+   </body>
+</html>

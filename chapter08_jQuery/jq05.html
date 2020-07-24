@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq05.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					//$("p").hide("slow"); //slow, fast, ms, 100..
+					$("p").hide(1000, function(){
+						alert("완료!!");
+					});
+				});
+				$("#show").click(function(){
+					 $("p").show(1000);
+				});				
+				$("#toggle").click(function(){
+					 $("p").toggle("slow");
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>효과 (hide, show, toggle)</h1>
+		<p>
+			띠용
+		</p>
+		<button id="hide">사라짐</button>
+		<button id="show">나타남</button>
+		<br/><br/>
+		<button id="toggle">토글</button>
+	</body>
+</html>

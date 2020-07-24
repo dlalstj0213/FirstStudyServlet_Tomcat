@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ajax02.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$.get("jq13.jsp?name=이민서", function(p1, p2, p3){
+						//$("#pId").load("jq13.jsp", function(p1, p2, p3){});
+						$("#pId").html(p1);
+					});
+				});
+				/*
+				$("#btn2").click(function(){
+					$.get("jq13.jsp", {name:"이민서", age:26}, function(p1, p2, p3){
+						$("#pId").html(p1);
+					});
+				});
+				*/
+				$("#btn2").click(function(){
+					$.get("jq13.jsp", {name:$("#name").val(), age:26}, function(p1, p2, p3){
+						$("#pId").html(p1);
+					});
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>Ajax - get()</h1>
+		<p id="pId">
+			결과를 여기에...
+		</p>
+		
+		<button id="btn1">클릭</button>
+		<br/>
+		이름 : <input id="name"/>
+		<button id="btn2">클릭(데이터 넘김)</button>
+	</body>
+</html>

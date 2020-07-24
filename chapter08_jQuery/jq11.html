@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq11.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("p").empty(); //특정하게 없앨 수 없음.
+				});
+				$("#b2").click(function(){
+					//$("p").remove(".hello"); //특정하게 없앨 수 있음.
+					$(".hello").remove(); // 같은 처리
+				});
+			});
+		</script>
+	<head>
+	<body style="text-align:center">
+		<h1>Remove(empty(), remove())</h1>
+		<p>
+			문단내용1<br/>
+			문단내용2<br/>
+			문단내용3<br/>
+		</p>
+		
+		<p class="hello">
+			문단내용4<br/>
+			문단내용5<br/>
+		</p>
+		
+		<button id="b1">비워줘잉~</button>&nbsp;&nbsp;
+		<button id="b2">없애줘잉~</button>
+	</body>
+</html>
